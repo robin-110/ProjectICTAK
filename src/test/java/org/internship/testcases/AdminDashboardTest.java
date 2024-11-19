@@ -61,6 +61,7 @@ public class AdminDashboardTest extends TestBase {
 		System.out.print("qq");
 
 		System.out.print(qwer);
+		System.out.print(New project);
 
 	}
 
