@@ -57,6 +57,11 @@ public class AdminDashboardTest extends TestBase {
 	@Test
 	public void addmentor() {
 		this.adbobject.addmentor();
+
+		System.out.print("qq");
+
+		System.out.print(qwer);
+
 	}
 
 }
