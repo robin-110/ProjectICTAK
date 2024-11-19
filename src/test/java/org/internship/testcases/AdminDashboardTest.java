@@ -58,7 +58,7 @@ public class AdminDashboardTest extends TestBase {
 	public void addmentor() {
 		this.adbobject.addmentor();
 		System.out.print("qwertyuiokmn");
-		System.out.print("qwertyuiokmn");
+		System.out.print("qazxc");
 	}
 
 }
