@@ -17,12 +17,12 @@ public class AdminDashboardTest extends TestBase {
 	//setup
 	@BeforeClass
 	public void setup() {
-		this.adbobject=new AdminDashboardPage (this.driver);
-		this.lp=new LoginPage(this.driver);
-		this.lp.click();
-	    this.lp.setUsername(this.prop.getProperty("unameadmin"));
-	    this.lp.setPassword(this.prop.getProperty("passwordadmin"));
-        this.lp.loginClick();
+		this.adbobject=new AdminDashboardPage (driver);
+		lp=new LoginPage(driver);
+		lp.click();
+	    lp.setUsername(this.prop.getProperty("unameadmin"));
+	    lp.setPassword(this.prop.getProperty("passwordadmin"));
+        lp.loginClick();
 	}
 	@BeforeMethod
 	public void bwait() {
@@ -32,42 +32,33 @@ public class AdminDashboardTest extends TestBase {
 	//verify add project button
 	@Test
 	public void addproject() {
-		boolean a = this.adbobject.addproject();
+		boolean a = adbobject.addproject();
 		Assert.assertTrue(a);// used to verify if a condition is true.
 	}
 	//verify logout button
 	@Test
 	public void logout() {
-		boolean l=this.adbobject.logout();
+		boolean l=adbobject.logout();
 		Assert.assertTrue(l);
 	}
 	//verify dashboard enabled
 	@Test
 	public void dashboard() {
-		boolean d =this.adbobject.dashboard();
+		boolean d =adbobject.dashboard();
 		Assert.assertTrue(d, null);
 	}
 	//check mentor tab
 	@Test
 	public void mentor() {
-		boolean m=this.adbobject.mentor();
+		boolean m=adbobject.mentor();
 		Assert.assertTrue(m, null);
 	}
 	//add mentor positive
 	@Test
 	public void addmentor() {
-		this.adbobject.addmentor();
+		adbobject.addmentor();
 
-		System.out.print("qwertyuiokmn");
-		System.out.print("qazxc");
-
-
-		System.out.print("qq");
-
-		System.out.print(qwer);
-		System.out.print(New project);
-
-
+		
 	}
 
 }

@@ -5,8 +5,8 @@
     <classes>
       <class name="org.internship.testcases.AdminDashboardTest">
         <methods>
-          <include name="mentor"/>
           <include name="setup"/>
+          <include name="addmentor"/>
           <include name="testSetUp"/>
           <include name="bwait"/>
         </methods>
