@@ -10,6 +10,15 @@ public class AdminDashboardPage {
 	public AdminDashboardPage(WebDriver driver) {
 		this.driver=driver;
 	}
+	public String urlreturn() throws InterruptedException{
+		Thread.sleep(5000);
+		String url=driver.getCurrentUrl();
+		return url;
+	}
+	public void logoutclick()
+	{
+		driver.findElement(By.xpath("//span[text()=\"Logout\"]")).click();
+	}
 	//verify add project button 
 	public boolean addproject() {
 		WebElement addp=this.driver.findElement(By.xpath("/html/body/div/div/div[2]/main/div[1]/button"));

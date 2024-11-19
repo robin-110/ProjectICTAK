@@ -16,9 +16,9 @@ public class TestBase {
    Properties prop;//inbuilt class
 
    public void readProp() throws IOException {
-      this.prop = new Properties();
-      FileInputStream fileinp = new FileInputStream("D:\\RCB\\STJune\\Groupfive\\internship\\src\\test\\resources\\config.properties");
-      this.prop.load(fileinp);//load config file
+     prop = new Properties();
+      FileInputStream fileinp = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\config.properties");
+     prop.load(fileinp);//load config file
    }
 
    @BeforeClass //browser selection
@@ -40,10 +40,10 @@ public class TestBase {
 				return;
          }
 
-         this.driver.get(this.prop.getProperty("url"));
-         this.driver.manage().window().maximize();
-         this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-         return;
+       driver.get(prop.getProperty("url"));
+         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
       }
 
       
