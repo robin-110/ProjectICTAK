@@ -17,11 +17,13 @@ public class LoginPage {
 
    public void setUsername(String username) {
       WebElement uname = driver.findElement(By.id("email"));
+      uname.clear();
       uname.sendKeys(username);
    }
 
    public void setPassword(String password) {
       WebElement pswd = driver.findElement(By.id("password"));
+      pswd.clear();
       pswd.sendKeys(password);
    }
 
@@ -45,7 +47,8 @@ public class LoginPage {
    }
    //logout
    public void logout() {
-	   WebElement lg=driver.findElement(By.xpath("/html/body/div/div/div[1]/header/div/a[2]/div/div[2]/span"));
+	   WebElement lg=driver.findElement(By.xpath("/html/body/div/div/div[1]/header/div/a[2]/div"));
+	   lg.click();
    }
   
 }

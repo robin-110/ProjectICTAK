@@ -20,44 +20,61 @@ public class AdminDashboardTest extends TestBase {
 		this.adbobject=new AdminDashboardPage (driver);
 		lp=new LoginPage(driver);
 		lp.click();
-	    lp.setUsername(this.prop.getProperty("unameadmin"));
-	    lp.setPassword(this.prop.getProperty("passwordadmin"));
+	    lp.setUsername(prop.getProperty("unameadmin"));
+	    lp.setPassword(prop.getProperty("passwordadmin"));
         lp.loginClick();
-	}
-	@BeforeMethod
-	public void bwait() {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
 	//verify add project button
-	@Test
+	@Test(priority=1)
 	public void addproject() {
 		boolean a = adbobject.addproject();
 		Assert.assertTrue(a);// used to verify if a condition is true.
+		
+	}
+	//Edit project button
+	@Test(priority=2)
+	public void epb() {
+		boolean a=adbobject.editproject();
+		Assert.assertTrue(a);
+		
+	}
+	//delete button
+	@Test(priority=3)
+	public void db() {
+		boolean a=adbobject.deleteproject();
+		Assert.assertTrue(a, "Delete button not enabled");
 	}
 	//verify logout button
-	@Test
+	@Test(priority=4)
 	public void logout() {
 		boolean l=adbobject.logout();
 		Assert.assertTrue(l);
 	}
 	//verify dashboard enabled
-	@Test
+	@Test(priority=5)
 	public void dashboard() {
 		boolean d =adbobject.dashboard();
 		Assert.assertTrue(d, null);
 	}
 	//check mentor tab
-	@Test
+	@Test(priority=6)
 	public void mentor() {
 		boolean m=adbobject.mentor();
 		Assert.assertTrue(m, null);
 	}
 	//add mentor positive
-	@Test
+	@Test(priority=8)
 	public void addmentor() {
 		adbobject.addmentor();
-
+		
+	}
+	//add project
+	@Test (priority=7)
+	public void adproject() {
+		boolean b = adbobject.addprojec();
+		Assert.assertTrue(b, "Project not added");
+		
 		
 	}
 

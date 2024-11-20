@@ -5,6 +5,7 @@
     <classes>
       <class name="org.internship.testcases.LoginTest"/>
       <class name="org.internship.testcases.HomeTest"/>
+      <class name="org.internship.testcases.AdminDashboardTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

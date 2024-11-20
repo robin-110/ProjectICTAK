@@ -12,22 +12,23 @@ public class HomePage {
    }
    //login button
    public boolean logbtn() {
-      WebElement loginbtn = this.driver.findElement(By.xpath("/html/body/div/nav/ul/li/a/button"));
-      return loginbtn.isDisplayed();
+      WebElement loginbtn = driver.findElement(By.xpath("/html/body/div/nav/ul/li/a/button"));
+      boolean a= loginbtn.isDisplayed();
+      return a;
    }
    //joinus button
    public boolean joinusbtn() {
-      WebElement joinbtn = this.driver.findElement(By.xpath("/html/body/div/div[1]/div/a/button"));
+      WebElement joinbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/a/button"));
       return joinbtn.isDisplayed();
    }
    //welcome message
    public boolean wm() {
-      WebElement welmsg = this.driver.findElement(By.xpath("/html/body/div/div[1]/div/h1"));
+      WebElement welmsg = driver.findElement(By.xpath("/html/body/div/div[1]/div/h1"));
       return welmsg.isDisplayed();
    }
    // logo
    public boolean logo() {
-      WebElement logo = this.driver.findElement(By.xpath("/html/body/div/nav/a/img"));
+      WebElement logo = driver.findElement(By.xpath("/html/body/div/nav/a/img"));
       return logo.isDisplayed();
    }
 }
