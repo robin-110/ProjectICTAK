@@ -24,8 +24,8 @@ public class LoginTest extends TestBase {
    @Test (priority=1)
    public void posLogina() {
       logobj.click();
-      logobj.setUsername(this.prop.getProperty("unameadmin"));
-      logobj.setPassword(this.prop.getProperty("passwordadmin"));
+      logobj.setUsername(prop.getProperty("unameadmin"));
+      logobj.setPassword(prop.getProperty("passwordadmin"));
       logobj.loginClick();
       String expectedurl="https://ictak-internship-portal-client.vercel.app/admin";
       String actualurl="https://ictak-internship-portal-client.vercel.app/admin";

@@ -12,23 +12,23 @@ public class HomePage {
    }
    //login button
    public boolean logbtn() {
-      WebElement loginbtn = driver.findElement(By.xpath("/html/body/div/nav/ul/li/a/button"));
+      WebElement loginbtn = driver.findElement(By.xpath("//button[@class='btn1']"));
       boolean a= loginbtn.isDisplayed();
       return a;
    }
    //joinus button
    public boolean joinusbtn() {
-      WebElement joinbtn = driver.findElement(By.xpath("/html/body/div/div[1]/div/a/button"));
+      WebElement joinbtn = driver.findElement(By.xpath("//button[text()='Join us']"));
       return joinbtn.isDisplayed();
    }
    //welcome message
    public boolean wm() {
-      WebElement welmsg = driver.findElement(By.xpath("/html/body/div/div[1]/div/h1"));
+      WebElement welmsg = driver.findElement(By.xpath("//h1[text()='Welcome to ICT Academy of Kerala']"));
       return welmsg.isDisplayed();
    }
    // logo
    public boolean logo() {
-      WebElement logo = driver.findElement(By.xpath("/html/body/div/nav/a/img"));
+      WebElement logo = driver.findElement(By.xpath("//img[@class='logo']"));
       return logo.isDisplayed();
    }
 }

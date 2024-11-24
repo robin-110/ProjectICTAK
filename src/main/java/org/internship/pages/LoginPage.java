@@ -32,22 +32,22 @@ public class LoginPage {
       logclick.click();
    }
    public void signup() {
-	   WebElement signup=driver.findElement(By.xpath("/html/body/div/div/main/div/div[2]/div/form/a"));
+	   WebElement signup=driver.findElement(By.xpath("//a[text()='Don’t have an account yet? Sign Up Now']"));
 	   signup.click();
    }
    //dashboard loaded or not mentor
    public boolean mdb() {
-	   WebElement mdb=driver.findElement(By.xpath("/html/body/div/div/div[2]/main/div[2]/div/button"));
+	   WebElement mdb=driver.findElement(By.xpath("//span[text()='Logout']"));
 	   return mdb.isDisplayed();
    }
    //dashboard loaded or not admin
    public boolean adb() {
-	   WebElement adb=driver.findElement(By.xpath("/html/body/div/div/div[2]/main/div[1]/button"));
+	   WebElement adb=driver.findElement(By.xpath("//button[text()='+ Add Project']"));
 	   return adb.isDisplayed();
    }
    //logout
    public void logout() {
-	   WebElement lg=driver.findElement(By.xpath("/html/body/div/div/div[1]/header/div/a[2]/div"));
+	   WebElement lg=driver.findElement(By.xpath("//span[text()='Logout']"));
 	   lg.click();
    }
   

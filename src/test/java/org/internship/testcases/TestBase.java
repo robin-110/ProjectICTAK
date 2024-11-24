@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
@@ -17,8 +18,9 @@ public class TestBase {
 
    public void readProp() throws IOException {
       this.prop = new Properties();
-      FileInputStream fileinp = new FileInputStream("C:\\Users\\rcben\\git\\ProjectICTAK\\src\\test\\resources\\config.properties");
+      FileInputStream fileinp = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\config.properties");
       this.prop.load(fileinp);//load config file
+      
    }
 
    @BeforeClass //browser selection
@@ -45,6 +47,10 @@ public class TestBase {
          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
          return;
       }
+   @AfterClass
+   public void close() {
+	   driver.close();
+   }
 
       
   
