@@ -32,7 +32,14 @@ public class LoginPage {
    public void signup() {
 	   WebElement signup=driver.findElement(By.xpath("/html/body/div/div/main/div/div[2]/div/form/a"));
 	   signup.click();
+	   
    }
+   public void setEmail(String emailid)
+	{
+	
+	WebElement email = driver.findElement(By.xpath("//*[@id=\"email\"]"));
+	email.sendKeys(emailid);
+	}
    //dashboard loaded or not mentor
    public boolean mdb() {
 	   WebElement mdb=driver.findElement(By.xpath("/html/body/div/div/div[2]/main/div[2]/div/button"));

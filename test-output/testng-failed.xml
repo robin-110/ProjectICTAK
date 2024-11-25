@@ -3,17 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.internship.testcases.LoginTest">
+      <class name="org.internship.testcases.MentorDashboardTest">
         <methods>
-          <include name="neglogin"/>
-          <include name="blank"/>
-          <include name="pass"/>
-          <include name="signup"/>
+          <include name="testdashboard"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="addmentor"/>
+          <include name="testEditandDeleteMentor"/>
+          <include name="bwait"/>
+          <include name="testLogoutAvailable"/>
+          <include name="testAddProject"/>
           <include name="testSetUp"/>
-          <include name="email"/>
-          <include name="setUp"/>
+          <include name="mentor"/>
         </methods>
-      </class> <!-- org.internship.testcases.LoginTest -->
+      </class> <!-- org.internship.testcases.MentorDashboardTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
